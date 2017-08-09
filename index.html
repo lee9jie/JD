@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 移动端开发 设置视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 编译完毕的 css文件 -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>京东移动站</title>
+</head>
+
+<body>
+    <!-- 布局容器 -->
+    <div class="index-layout">
+        <!-- 顶部搜索栏 -->
+        <!--header>a[href='javascript:void(0)']{logo}+input[type='search']+a[href='javascript:void(0)']{登陆}-->
+        <header>
+            <a href="javascript:void(0)"></a>
+            <input type="search" placeholder="请输入搜索的内容">
+            <a href="javascript:void(0)">登陆</a>
+        </header>
+
+        <!-- 轮播图 -->
+        <!--.index-banner>ul.banner-imgs>li*8>a[href='javascript:void(0)']>img[src='img/l$.jpg']-->
+        <div class="index-banner">
+            <!-- 图片结构 别忘记清除浮动-->
+            <ul class="banner-imgs clearfix">
+                <li><a href="javascript:void(0)"><img src="img/l1.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l2.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l3.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l4.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l5.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l6.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l7.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l8.jpg" alt=""></a></li>
+            </ul>
+            <!-- 索引的li标签 别忘记清除浮动 -->
+            <!--.banner-index.clearfix>li.fl*8-->
+            <ul class="banner-index clearfix">
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+            </ul>
+        </div>
+
+        <!-- 导航区域 -->
+        <!--.index-nav>ul>li*8>a[href='javascript:void(0)']>img[src='./img/nav$-1.png']+p{分类查询}-->
+        <div class="index-nav">
+            <ul>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav0.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav1.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav2.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav3.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav4.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav5.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav6.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav7.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+
+            </ul>
+        </div>
+
+        <!-- 主体内容区域 -->
+        <!--.index-content>section*4>.top+.bottom-->
+        <div class="index-content">
+            <!-- 秒杀区域 -->
+            <section class='second-kill'>
+                <div class="top">
+                    <div class="left">
+                        <span></span>
+                        <span>掌上秒杀</span>
+                        <ul>
+                            <li>0</li>
+                            <li>0</li>
+                            <li>:</li>
+                            <li>0</li>
+                            <li>0</li>
+                            <li>:</li>
+                            <li>0</li>
+                            <li>0</li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <a href="javascript:void(0)">更多&gt;</a>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <!--ul>li*3>a[href='javascript:void(0)']>img[src='./img/detail01.jpg']+p{¥10.00}+p{¥100.00}-->
+                    <ul>
+                        <li><a href="javascript:void(0)">
+                                <img src="./img/detail01.jpg" alt="">
+                                <p>¥10.00</p>
+                                <p>¥100.00</p>
+                            </a></li>
+                        <li><a href="javascript:void(0)">
+                                <img src="./img/detail01.jpg" alt="">
+                            </a>
+                            <p>¥10.00</p>
+                            <p>¥100.00</p>
+                        </li>
+                        <li><a href="javascript:void(0)">
+                                <img src="./img/detail01.jpg" alt="">
+                                <p>¥10.00</p>
+                                <p>¥100.00</p>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 京东超市区域 -->
+            <section>
+                <div class="top">
+                    <h2>京东超市</h2>
+                </div>
+                <div class="bottom clearfix">
+                    <!--a*3[href='javascript:void(0)']>img[src='./img/cp$.jpg']-->
+                    <a class='bd-r fl' href="javascript:void(0)"><img src="./img/cp1.jpg" alt=""></a>
+                    <a class='bd-b fr' href="javascript:void(0)"><img src="./img/cp2.jpg" alt=""></a>
+                    <a class='fr' href="javascript:void(0)"><img src="./img/cp3.jpg" alt=""></a>
+                </div>
+            </section>
+            <section>
+                <div class="top">
+                    <h2>京东超市</h2>
+                </div>
+                <div class="bottom clearfix">
+                    <a class='bd-l white fr' href="javascript:void(0)"><img src="./img/cp4.jpg" alt=""></a>
+                    <a class='bd-b white fl' href="javascript:void(0)"><img src="./img/cp5.jpg" alt=""></a>
+                    <a class='fl' href="javascript:void(0)"><img src="./img/cp6.jpg" alt=""></a>
+                </div>
+            </section>
+            <section>
+                <div class="top">
+                    <h2>京东超市</h2>
+                </div>
+                <div class="bottom clearfix">
+                    <a class='bd-r fl ' href="javascript:void(0)"><img src="./img/cp1.jpg" alt=""></a>
+                    <a class='bd-b fr ' href="javascript:void(0)"><img src="./img/cp2.jpg" alt=""></a>
+                    <a class='fr' href="javascript:void(0)"><img src="./img/cp3.jpg" alt=""></a>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+</body>
+
+</html>
+

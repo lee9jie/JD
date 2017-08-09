@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 移动端开发 设置视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 编译完毕的 css文件 -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>京东移动站_jQuery版本</title>
+</head>
+
+<body>
+    <!-- 布局容器 -->
+    <div class="index-layout">
+        <!-- 顶部搜索栏 -->
+        <!--header>a[href='javascript:void(0)']{logo}+input[type='search']+a[href='javascript:void(0)']{登陆}-->
+        <header>
+            <a href="javascript:void(0)"></a>
+            <input type="search" placeholder="请输入搜索的内容">
+            <a href="javascript:void(0)">登陆</a>
+        </header>
+
+        <!-- 轮播图 -->
+        <!--.index-banner>ul.banner-imgs>li*8>a[href='javascript:void(0)']>img[src='img/l$.jpg']-->
+        <div class="index-banner">
+            <!-- 图片结构 别忘记清除浮动-->
+            <ul class="banner-imgs clearfix">
+                <li><a href="javascript:void(0)"><img src="img/l1.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l2.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l3.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l4.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l5.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l6.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l7.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="img/l8.jpg" alt=""></a></li>
+            </ul>
+            <!-- 索引的li标签 别忘记清除浮动 -->
+            <!--.banner-index.clearfix>li.fl*8-->
+            <ul class="banner-index clearfix">
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+            </ul>
+        </div>
+
+        <!-- 导航区域 -->
+        <!--.index-nav>ul>li*8>a[href='javascript:void(0)']>img[src='./img/nav$-1.png']+p{分类查询}-->
+        <div class="index-nav">
+            <ul>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav0.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav1.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav2.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav3.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav4.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav5.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav6.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+                <li><a href="javascript:void(0)">
+                        <img src="./img/nav7.png" alt="">
+                        <p>分类查询</p>
+                    </a></li>
+
+            </ul>
+        </div>
+
+        <!-- 主体内容区域 -->
+        <!--.index-content>section*4>.top+.bottom-->
+        <div class="index-content">
+            <!-- 秒杀区域 -->
+            <section class='second-kill'>
+                <div class="top">
+                    <div class="left">
+                        <span></span>
+                        <span>掌上秒杀</span>
+                        <ul>
+                            <li>0</li>
+                            <li>0</li>
+                            <li>:</li>
+                            <li>0</li>
+                            <li>0</li>
+                            <li>:</li>
+                            <li>0</li>
+                            <li>0</li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <a href="javascript:void(0)">更多&gt;</a>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <!--ul>li*3>a[href='javascript:void(0)']>img[src='./img/detail01.jpg']+p{¥10.00}+p{¥100.00}-->
+                    <ul>
+                        <li><a href="javascript:void(0)">
+                                <img src="./img/detail01.jpg" alt="">
+                                <p>¥10.00</p>
+                                <p>¥100.00</p>
+                            </a></li>
+                        <li><a href="javascript:void(0)">
+                                <img src="./img/detail01.jpg" alt="">
+                            </a>
+                            <p>¥10.00</p>
+                            <p>¥100.00</p>
+                        </li>
+                        <li><a href="javascript:void(0)">
+                                <img src="./img/detail01.jpg" alt="">
+                                <p>¥10.00</p>
+                                <p>¥100.00</p>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 京东超市区域 -->
+            <section>
+                <div class="top">
+                    <h2>京东超市</h2>
+                </div>
+                <div class="bottom clearfix">
+                    <!--a*3[href='javascript:void(0)']>img[src='./img/cp$.jpg']-->
+                    <a class='bd-r fl' href="javascript:void(0)"><img src="./img/cp1.jpg" alt=""></a>
+                    <a class='bd-b fr' href="javascript:void(0)"><img src="./img/cp2.jpg" alt=""></a>
+                    <a class='fr' href="javascript:void(0)"><img src="./img/cp3.jpg" alt=""></a>
+                </div>
+            </section>
+            <section>
+                <div class="top">
+                    <h2>京东超市</h2>
+                </div>
+                <div class="bottom clearfix">
+                    <a class='bd-l white fr' href="javascript:void(0)"><img src="./img/cp4.jpg" alt=""></a>
+                    <a class='bd-b white fl' href="javascript:void(0)"><img src="./img/cp5.jpg" alt=""></a>
+                    <a class='fl' href="javascript:void(0)"><img src="./img/cp6.jpg" alt=""></a>
+                </div>
+            </section>
+            <section>
+                <div class="top">
+                    <h2>京东超市</h2>
+                </div>
+                <div class="bottom clearfix">
+                    <a class='bd-r fl ' href="javascript:void(0)"><img src="./img/cp1.jpg" alt=""></a>
+                    <a class='bd-b fr ' href="javascript:void(0)"><img src="./img/cp2.jpg" alt=""></a>
+                    <a class='fr' href="javascript:void(0)"><img src="./img/cp3.jpg" alt=""></a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- 导入Jquery -->
+<script src='./lib/jQuery/jquery-3.1.1.min.js'></script>
+<!-- 自己的js代码 -->
+<script>
+    $(function () {
+        // js效果--JQUery实现
+        // jQuery的核心  ---找到元素(选择器,筛选的方法)   操纵他们(.height().width().scrollTop()....)
+        /*
+            需求1
+                滚动页面 修改搜索栏的透明度
+                    滚动时来干事情 --滚动事件
+                    修改搜索栏 --获取搜索栏
+                    滚动的距离不同 透明度不同
+                        获取滚动的距离 --scrolltop
+                            除以
+                        获取最大的滚动范围 --获取一个最大的滚动范围
+                    把计算出来的小数 设置给 透明度 -- dom.style.backgroundColor
+            需求2
+                倒计时
+                    定义一个总时间 -- 变量(这里写死) 秒
+                    获取要修改的dom元素 数组 ---querySelectorAll()
+                    间隔去修改显示的时间 -- 定时器
+                        时间递减 -1秒
+                        修改页面中的dom元素的显示内容
+                            获取到的总时间 秒 3867秒
+                            格式化为时分秒
+                                小时 3867 / 3600 = Math.floor(1.x)
+                                分 3867 % 3600 = 267 /60 =Math.floor( 4.x)
+                                秒 3867 % 60 =27 
+
+                        设置的时候 需要考虑 十位跟 个位 15小时
+                        15/10 = Math.flloor(1.x)
+                        15%10 = 5
+                    时间没有了 提示用户 关闭倒计时
+                    真正的商业网站中不会倒计时这么慢
+        */
+        scrollChangeColor();
+        countTime();
+    })
+    // 需求1 滚动改变颜色
+    /*
+      需求1
+        滚动页面 修改搜索栏的透明度
+            滚动时来干事情 --滚动事件
+            修改搜索栏 --获取搜索栏
+            滚动的距离不同 透明度不同
+                获取滚动的距离 --scrolltop
+                    除以
+                获取最大的滚动范围 --获取一个最大的滚动范围
+            把计算出来的小数 设置给 透明度 -- dom.style.backgroundColor
+    */
+    function scrollChangeColor() {
+        // 获取header
+        var $header = $('header');
+        // 获取最大的滚动范围
+        var height = $('.index-banner').height();
+
+        // 绑定滚动事件
+        $(window).scroll(function () {
+            var scrollTop = $(document.body).scrollTop();
+            var alpha = scrollTop / height;
+            if (alpha > 0.8) {
+                alpha = 0.8;
+            }
+            $header.css({
+                backgroundColor: 'rgba(235, 48, 61,' + alpha + ')'
+            })
+        })
+    }
+    // 需求2 倒计时
+    /*
+         需求2
+        倒计时
+            定义一个总时间 -- 变量(这里写死) 秒
+            获取要修改的dom元素 数组 ---querySelectorAll()
+            间隔去修改显示的时间 -- 定时器
+                时间递减 -1秒
+                修改页面中的dom元素的显示内容
+                    获取到的总时间 秒 3867秒
+                    格式化为时分秒
+                        小时 3867 / 3600 = Math.floor(1.x)
+                        分 3867 % 3600 = 267 /60 =Math.floor( 4.x)
+                        秒 3867 % 60 =27 
+
+                设置的时候 需要考虑 十位跟 个位 15小时
+                15/10 = Math.flloor(1.x)
+                15%10 = 5
+            时间没有了 提示用户 关闭倒计时
+            真正的商业网站中不会倒计时这么慢
+    */
+    function countTime() {
+        var totalSec = 6 * 60 * 60;
+        var $secKillLiList = $('.second-kill .top li');
+        var interId = setInterval(function(){
+            totalSec--;
+            var hour =Math.floor(totalSec / 3600);
+            var minute = Math.floor(totalSec %3600 /60);
+            var second = totalSec % 60;
+            console.log(hour+'|'+minute+'|'+second);
+            // 小时的十位
+            $secKillLiList.eq(0).html(Math.floor(hour/10));
+            // 小时的个位
+            $secKillLiList.eq(1).html(hour%10);
+            // 分的十位
+            $secKillLiList.eq(3).html(Math.floor(minute/10));
+            // 分的个位
+            $secKillLiList.eq(4).html(minute%10);
+            // 秒的十位
+            $secKillLiList.eq(6).html(Math.floor(second/10));
+            // 秒的个位
+            $secKillLiList.eq(7).html(second%10);
+        },100)
+    }
+</script>

@@ -1,0 +1,233 @@
+@import 'normalize.scss';
+// 引入 base 自己的base中 可能会修改一部分的样式
+@import 'base.scss';
+// sass的变量
+$jdRed:#EB303D;
+// 1.顶部搜索栏的布局
+header {
+    background-color: $jdRed;
+    height: 40px; // 开启弹性布局
+    display: flex; // 设置内容上下居中
+    align-items: center;
+    a {
+        color: white;
+        width: 60px;
+        text-align: center;
+        line-height: 40px;
+    }
+    input {
+        height: 30px;
+        border-radius: 15px;
+        flex: 1;
+    } // 单独为第一个 a标签设置背景图
+    a:first-child {
+        width: 56px;
+        margin: 0 10px;
+        height: 21px;
+        background: url('../img/sprites.png')no-repeat 0 -109px /200px 200px;
+    }
+}
+
+// 2.轮播图容器
+.index-banner {
+    overflow: hidden;
+    position: relative; // 2.1图片结构 
+    .banner-imgs {
+        width: 800%;
+        li {
+            // 每一个li标签都是 1/8
+            width: 12.5%;
+            float: left;
+            a {
+                width: 100%;
+                display: block;
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    } // 2.2索引的ul li标签
+    .banner-index {
+        position: absolute;
+        bottom: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        li {
+            width: 8px;
+            height: 8px;
+            margin-right: 4px;
+            background-color: white;
+            border-radius: 50%;
+        }
+    }
+}
+
+// 3.导航区域
+.index-nav {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        li {
+            width: 25%;
+            a {
+                display: block;
+                width: 100%;
+                img {
+                    display: block;
+                    width: 60%;
+                    margin: 0 auto;
+                }
+                p {
+                    text-align: center;
+                    color: #666;
+                    font-size: 12px;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+// 4.主体内容区域
+.index-content {
+    padding: 10px 5px 0;
+    background-color: hotpink;
+    section {
+        background-color: white;
+        margin-bottom: 10px;
+        .top {
+            height: 32px;
+            border-bottom: 1px solid #ccc;
+        }
+        .bottom {}
+    } // 秒杀区域的布局
+    section.second-kill {
+        // 顶部区域 
+        .top {
+            display: flex;
+            justify-content: space-between;
+            .right {
+                background-color: skyblue;
+                padding-right: 5px;
+                a {
+                    line-height: 32px;
+                    font-size: 14px;
+                    color: #666;
+                }
+            } // 左边的布局
+            .left {
+                background-color: yellowgreen; // ul跟span一行
+                display: flex; // 上下居中
+                align-items: center;
+                span {
+                    margin: 0 5px;
+                }
+                span:nth-child(1){
+                    width: 20px;
+                    height: 25px;
+                    background: url('../img/seckill-icon.png')no-repeat center /20px 25px;
+                }
+                span:nth-child(2) {
+                    color: $jdRed;
+                }
+                ul {
+                    // li横着
+                    display: flex;
+                    li {
+                        background-color: black;
+                        color: white;
+                        margin-right: 2px;
+                    }
+                    li:nth-child(3n) {
+                        background-color: white;
+                        color: black;
+                    }
+                }
+            }
+        } // 底部区域
+        .bottom {
+            ul {
+                display: flex;
+                padding-top: 10px;
+                li {
+                    // flex:1;
+                    // 或者给百分比宽度
+                    width: 33.33333%;
+                    a {
+                        display: block;
+                        width: 100%;
+                        img {
+                            display: block;
+                            width: 60%;
+                            margin: 0 auto;
+                        }
+                    } // 样式中 把p标签迁移出来了 所以 样式也要跟着一起修改
+                    p {
+                        text-align: center;
+                        font-size: 12px;
+                        padding: 5px 0;
+                    } // 只找第一个p标签
+                    p:nth-of-type(1) {
+                        color: $jdRed;
+                    } // 只找第二个p标签
+                    p:nth-of-type(2) {
+                        color: #666;
+                        text-decoration: line-through;
+                    }
+                } // 为中间的li添加两边的 竖线
+                li:nth-child(2) a {
+                    border-right: 1px solid #000;
+                    border-left: 1px solid #000;
+                }
+            }
+        }
+    } // 超市区域
+    // not 是 伪类选择器中 
+    // not后面跟一个条件
+    section:not(.second-kill) {
+        .top {
+            display: flex;
+            align-items: center; // padding-left: 10px;
+            h2 {
+                font-size: 16px;
+                margin-left: 10px;
+                font-weight: normal;
+                border-left: 4px solid $jdRed;
+                padding-left: 10px;
+            }
+        }
+        .bottom {
+            a {
+                width: 50%;
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+// 5.约束 容器的 最小的宽度
+// 防止用户无止境的压缩
+.index-layout{
+    // 早几年 280多一些
+    min-width: 320px;
+    // 一般 640px 750px
+    max-width:640px;
+    margin: 0 auto;
+}
+
+// 6.为header 添加固定定位 
+header{
+    position: fixed;
+    // 设置层级
+    z-index: 998;
+    min-width: 320px;
+    max-width: 640px;
+    width: 100%;
+    // 设置为 全透明
+    background-color: rgba(235, 48, 61,0);
+}

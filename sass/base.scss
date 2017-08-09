@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+// 快速的浮动类
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix::before {
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+// 移动端不用写
+.clearfix {
+    zoom: 1;
+}
+
+// 去除input的 默认样式
+input {
+    border: none;
+    outline: none;
+}
+
+// 使用伪元素的方式 来添加边框 让他看起来 像有一个边框
+// 元素以 bd- 这个类开头 就添加 before 伪元素
+// 属性选择器 class以 bd-开头
+[class^='bd-'] {
+    // 容器设置 相对定位
+    position: relative;
+}
+
+[class^='bd-']::before {
+    // 必须content
+    content: '';
+    // 伪元素 设置 绝对定位
+    position: absolute;
+    background-color: #666;
+}
+
+// 类名以bd-开头 同时拥有white这个类
+[class^='bd-'].white::before {
+    background-color: white;
+}
+
+//  使用伪元素的方式 来设置 四周的边框 
+// 如果使用border 会出现把元素 撑大的问题 
+.bd-t::before {
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+}
+
+.bd-b::before {
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+}
+
+.bd-l::before {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1px;
+}
+
+.bd-r::before {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1px;
+}
